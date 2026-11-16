@@ -1,27 +1,577 @@
-body{
-    color: black;
-    font-size: 18px;
-    font-style: Arial;
-}
-img{
-    height: 200px;
-    width: 320px;
-    border-radius: 10px;
-    border: 2px solid black;
-    display: inline-block;        
-    object-fit: cover;
-}
-.minha_img{
-    height: fit-content;
-    width: 350px;
-}
-.caixa{
-    display: flex;
-    gap: 50px;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-    padding: 20px;
-    background-color: rgb(255, 252, 226);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+/* ==========================================================
+   Página do Vinicius
+   Mesmo visual da página inicial: fundo escuro e cards
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    background: #090909;
+    color: #ececf2;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Estrutura geral ---------- */
+
+.topo,
+main,
+.rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* ---------- Topo ---------- */
+
+.topo {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 24px;
+}
+
+.menu a {
+    padding: 10px 0;
+    color: #a0a0a8;
+}
+
+.menu a:hover,
+.menu a.atual {
+    color: #ffffff;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+    padding: 64px 0 100px;
+}
+
+.hero-texto {
+    flex: 1 1 auto;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: #a0a0a8;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 88px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.destaque {
+    display: block;
+    color: #155dfc;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.botao-primario {
+    background: #ececf2;
+    color: #090909;
+}
+
+.botao-primario:hover {
+    background: #ffffff;
+}
+
+.botao-secundario {
+    border: 1px solid #2a2a2e;
+    background: #121212;
+}
+
+.botao-secundario:hover {
+    border-color: #ffffff;
+}
+
+/* ---------- Cards (mesmo estilo da página inicial) ---------- */
+
+.foto,
+.item,
+.foto-gatas,
+.gosto,
+.jogo,
+.lugar-card {
+    border: 1px solid #232326;
+    border-radius: 16px;
+    background: #0e0e0f;
+}
+
+.item:hover,
+.foto-gatas:hover,
+.gosto:hover,
+.jogo:hover,
+.lugar-card:hover {
+    border-color: #ffffff;
+    background: #161617;
+}
+
+.foto {
+    width: 400px;
+    padding: 12px;
+}
+
+.foto img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ---------- Seções ---------- */
+
+.secao {
+    padding: 48px 0 90px;
+}
+
+h2 {
+    margin-bottom: 36px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* ---------- Curiosidades ---------- */
+
+.curiosidades {
+    display: flex;
+    gap: 20px;
+}
+
+.lista-curiosidades {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 84px;
+    padding: 16px 20px;
+}
+
+.numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #3b2a33;
+    color: #fbd0e3;
+    font-size: 15px;
+}
+
+.item p {
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.foto-gatas {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+/* a foto ocupa a altura que sobrar ao lado da lista */
+.foto-gatas img {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.foto-gatas p {
+    padding: 12px 8px 4px;
+    color: #a0a0a8;
+    font-size: 15px;
+}
+
+/* ---------- Listas de cards: Gosto de, Jogos e Lugares ---------- */
+
+.gostos,
+.jogos,
+.lugares {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 2%;
+}
+
+/* ---------- Gosto de ---------- */
+
+.gosto {
+    width: 23%;
+    padding: 12px;
+}
+
+.gosto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.gosto-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 12px;
+    background: #10261a;
+}
+
+.gosto .gosto-icone img {
+    width: 40%;
+    max-width: 90px;
+    height: auto;
+    border-radius: 0;
+}
+
+.gosto-nome {
+    display: block;
+    padding: 14px 6px 4px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* ---------- Jogos ---------- */
+
+.jogo {
+    width: 18%;
+    padding: 12px;
+}
+
+.jogo-capa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.jogo-nome {
+    display: block;
+    padding: 14px 6px 0;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.jogo-tipo {
+    display: block;
+    padding: 2px 6px 4px;
+    color: #a0a0a8;
+    font-size: 14px;
+}
+
+.jogo-subnautica .jogo-capa {
+    background: #14506b;
+}
+
+.jogo-valorant .jogo-capa {
+    background: #6b232c;
+}
+
+.jogo-minecraft .jogo-capa {
+    background: #2f5a27;
+}
+
+.jogo-satisfactory .jogo-capa {
+    background: #6b4220;
+}
+
+.jogo-tbw .jogo-capa {
+    background: #4a3a73;
+}
+
+/* ---------- Lugares ---------- */
+
+.lugares-quatro .lugar {
+    width: 23%;
+}
+
+.lugares-cinco .lugar {
+    width: 18%;
+}
+
+.lugar-card {
+    display: block;
+    padding: 12px;
+}
+
+.lugar-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.lugar-nome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 6px 4px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.seta {
+    color: #a0a0a8;
+}
+
+.lugar-card:hover .seta {
+    color: #ffffff;
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape-conteudo {
+    padding-top: 28px;
+    padding-bottom: 44px;
+    border-top: 1px solid #232326;
+    color: #a0a0a8;
+    font-size: 15px;
+}
+
+.rodape-linha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.botao-voltar {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #090909;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.creditos {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.creditos a {
+    text-decoration: underline;
+}
+
+/* ---------- Responsivo: tablet ---------- */
+
+@media (max-width: 1000px) {
+    .gosto,
+    .lugares-quatro .lugar {
+        width: 48%;
+    }
+
+    .jogo,
+    .lugares-cinco .lugar {
+        width: 31%;
+    }
+
+    .hero {
+        gap: 36px;
+    }
+
+    .foto {
+        width: 340px;
+    }
+
+    h1 {
+        font-size: 76px;
+    }
+}
+
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 48px 0 72px;
+    }
+
+    .hero-texto {
+        flex: none;
+    }
+
+    .foto {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .curiosidades {
+        flex-direction: column;
+    }
+
+    .lista-curiosidades,
+    .foto-gatas {
+        flex: none;
+    }
+
+    .foto-gatas img {
+        flex: none;
+        height: auto;
+    }
+}
+
+/* ---------- Responsivo: celular ---------- */
+
+@media (max-width: 640px) {
+    body {
+        font-size: 16px;
+    }
+
+    .topo,
+    main,
+    .rodape {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu {
+        justify-content: flex-start;
+        gap: 6px 16px;
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 36px 0 60px;
+    }
+
+    h1 {
+        font-size: 52px;
+        letter-spacing: -1px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .botao {
+        text-align: center;
+    }
+
+    .secao {
+        padding: 40px 0 64px;
+    }
+
+    h2 {
+        margin-bottom: 28px;
+        font-size: 26px;
+    }
+
+    .item {
+        gap: 16px;
+        min-height: 76px;
+    }
+
+    .item p {
+        font-size: 17px;
+    }
+
+    .gostos,
+    .jogos,
+    .lugares {
+        gap: 14px 2%;
+    }
+
+    .gosto,
+    .jogo,
+    .lugares-quatro .lugar,
+    .lugares-cinco .lugar {
+        width: 47%;
+    }
+
+    .gosto,
+    .jogo,
+    .lugar-card {
+        padding: 10px;
+    }
+
+    .gosto img,
+    .gosto-icone,
+    .jogo-capa,
+    .lugar-card img {
+        height: 110px;
+    }
+
+    .jogo-capa {
+        font-size: 28px;
+    }
+
+    .gosto-nome,
+    .jogo-nome,
+    .lugar-nome {
+        padding: 12px 4px 2px;
+        font-size: 16px;
+    }
+
+    .rodape-linha {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
