@@ -1,0 +1,1092 @@
+﻿
+
+
+:root {
+    --fundo: #242733;
+    --fundo-secundario: #2b2b2b;
+    --texto: #ececf2;
+    --texto-suave: #a0a0a8;
+
+    --azul: #3269e7;
+    --azul-escuro: #214791;
+
+    --vidro-forte: rgba(255, 255, 255, 0.07);
+    --card-fundo: rgba(255, 255, 255, 0.025);
+    --card-borda: rgba(255, 255, 255, 0.10);
+    --borda-hover: rgba(50, 105, 231, 0.5);
+
+    --raio-pequeno: 8px;
+    --raio-medio: 16px;
+    --raio-grande: 24px;
+
+    --largura: 1440px;
+    --transicao: 0.3s ease;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+body, button, a {
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: var(--azul);
+    color: #242733;
+}
+
+
+
+
+.topo {
+    width: 100%;
+    height: 82px;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: rgba(36, 39, 51, 0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.logo span,
+.rodape-logo {
+    color: var(--azul);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu a {
+    position: relative;
+    color: var(--texto-suave);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    transition: var(--transicao);
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--azul);
+    transition: var(--transicao);
+}
+
+.menu a:hover {
+    color: var(--texto);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu-contato {
+    padding: 12px 18px;
+    border: 1px solid var(--card-borda);
+    border-radius: var(--raio-pequeno);
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    transition: var(--transicao);
+}
+
+.menu-contato:hover {
+    background: var(--azul);
+    color: #fff;
+    border-color: var(--azul);
+}
+
+
+
+
+.hero {
+    width: 100%;
+    min-height: 760px;
+    height: 100vh;
+    max-height: 1000px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    padding: 120px 10% 80px;
+    overflow: hidden;
+
+    background: #242733;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #242733 0%,
+            rgba(36, 39, 51, 0.94) 27%,
+            rgba(36, 39, 51, 0.55) 55%,
+            rgba(36, 39, 51, 0.15) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #242733 0%,
+            transparent 35%
+        );
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 24px;
+
+    color: var(--azul);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(80px, 12vw, 165px);
+    font-weight: 800;
+    line-height: 0.79;
+    letter-spacing: -9px;
+}
+
+.hero h1 span {
+    color: var(--azul);
+}
+
+.hero-conteudo p {
+    max-width: 410px;
+    margin-top: 35px;
+
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.botao-principal {
+    width: fit-content;
+    margin-top: 35px;
+    padding: 17px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    background: var(--azul);
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    transition: var(--transicao);
+}
+
+.botao-principal span {
+    font-size: 18px;
+}
+
+.botao-principal:hover {
+    background: var(--azul-escuro);
+    transform: translateY(-4px);
+}
+.secao {
+    width: 100%;
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 130px 9%;
+}
+
+.secao-cabecalho {
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--card-borda);
+}
+
+.secao-numero {
+    color: var(--azul);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.secao-legenda {
+    color: var(--texto-suave);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+
+
+.sobre {
+    padding-top: 150px;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.sobre-titulo h2,
+.secao-destaque h2,
+.gostos-intro h2,
+.memorias-intro h2,
+.lugares-intro h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(55px, 7vw, 95px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -5px;
+}
+
+.sobre-titulo h2 span,
+.secao-destaque h2 span,
+.gostos-intro h2 span,
+.memorias-intro h2 span,
+.lugares-intro h2 span {
+    color: var(--azul);
+}
+
+.sobre-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sobre-texto p,
+.secao-destaque-texto p,
+.gostos-intro p,
+.memorias-intro p,
+.lugares-intro p,
+.memorias-texto p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.sobre-fotos {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 85px;
+}
+
+.sobre-fotos img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: var(--raio-medio);
+    filter: grayscale(30%);
+    transition: var(--transicao);
+}
+
+.sobre-fotos img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-8px);
+}
+
+
+
+
+.familia {
+    max-width: none;
+    padding-left: max(9%, calc((100% - 1180px) / 2));
+    padding-right: max(9%, calc((100% - 1180px) / 2));
+
+    background:
+        radial-gradient(
+            ellipse at 90% 40%,
+            rgba(142, 202, 247, 0.08),
+            transparent 45%
+        ),
+        var(--fundo-secundario);
+}
+
+.secao-destaque {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.secao-destaque-texto h2 {
+    margin-bottom: 30px;
+}
+
+.secao-destaque-texto p {
+    max-width: 430px;
+}
+
+.secao-destaque-imagem {
+    height: 480px;
+    overflow: hidden;
+    border-radius: var(--raio-grande);
+}
+
+.secao-destaque-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.secao-destaque-imagem:hover img {
+    transform: scale(1.04);
+}
+
+.galeria {
+    margin-top: 25px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--raio-grande);
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicao);
+}
+
+.galeria:hover img {
+    transform: scale(1.03);
+}
+
+
+
+
+.gostos-intro,
+.memorias-intro,
+.lugares-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 65px;
+}
+
+.gostos-intro p,
+.memorias-intro p,
+.lugares-intro p {
+    max-width: 350px;
+}
+
+.gostos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.gosto-card {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    border-radius: var(--raio-medio);
+    background: var(--fundo-secundario);
+}
+
+.gosto-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        0deg,
+        rgba(36, 39, 51, 0.98) 0%,
+        rgba(36, 39, 51, 0.2) 65%,
+        transparent 100%
+    );
+}
+
+.gosto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    transition: transform 0.6s ease;
+}
+
+.gosto-card:hover img {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.gosto-info {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 22px;
+    right: 15px;
+}
+
+.gosto-info span {
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.gosto-info h3 {
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.gosto-info p {
+    margin-top: 8px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.gostos-fotos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gostos-fotos img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: var(--raio-medio);
+    transition: var(--transicao);
+}
+
+.gostos-fotos img:hover {
+    transform: translateY(-6px);
+}
+
+
+
+
+.memorias {
+    max-width: none;
+    padding-left: max(9%, calc((100% - 1180px) / 2));
+    padding-right: max(9%, calc((100% - 1180px) / 2));
+
+    background:
+        radial-gradient(
+            ellipse at 10% 70%,
+            rgba(142, 202, 247, 0.07),
+            transparent 40%
+        ),
+        var(--fundo-secundario);
+}
+
+.memorias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 15px;
+}
+
+.memorias-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--raio-medio);
+    transition: var(--transicao);
+}
+
+.memorias-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.memorias-grid img:nth-child(4) {
+    grid-column: span 2;
+}
+
+.memorias-grid img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.15);
+}
+
+.memorias-texto {
+    max-width: 750px;
+    margin: 55px auto 0;
+    text-align: center;
+}
+
+
+
+
+.lugares-listas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.lugares-bloco {
+    padding: 40px;
+    border: 1px solid var(--card-borda);
+    border-radius: var(--raio-grande);
+    background: var(--card-fundo);
+    transition: var(--transicao);
+}
+
+.lugares-bloco:hover {
+    border-color: var(--borda-hover);
+    background: var(--vidro-forte);
+}
+
+.lugares-bloco .etiqueta {
+    margin-bottom: 18px;
+    font-size: 9px;
+}
+
+.lugares-bloco h3 {
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.lugares-bloco ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    list-style: none;
+}
+
+.lugares-bloco li {
+    padding-bottom: 12px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    border-bottom: 1px solid var(--card-borda);
+    transition: var(--transicao);
+}
+
+.lugares-bloco li:hover {
+    color: var(--azul);
+    padding-left: 5px;
+}
+
+.lugares-fotos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.lugares-fotos img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--raio-medio);
+    transition: var(--transicao);
+}
+
+.lugares-fotos img:hover {
+    transform: translateY(-6px);
+}
+
+
+
+
+.rodape {
+    padding: 75px 9% 25px;
+    background: #242733;
+    border-top: 1px solid var(--card-borda);
+}
+
+.rodape-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    padding-bottom: 55px;
+}
+
+.rodape-etiqueta {
+    color: #8ecaf7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.rodape h2 {
+    margin-top: 14px;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.rodape-mensagem > p {
+    margin-top: 12px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.rodape-email {
+    display: inline-block;
+    margin-top: 20px;
+    color: #8ecaf7;
+    font-size: 14px;
+    transition: var(--transicao);
+}
+
+.rodape-email:hover {
+    color: var(--texto);
+}
+
+.rodape-dados {
+    min-width: 260px;
+    display: grid;
+    gap: 16px;
+}
+
+.rodape-dados p {
+    display: grid;
+    gap: 4px;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.rodape-dados span {
+    color: var(--texto-suave);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rodape-base {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--card-borda);
+    color: var(--texto-suave);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.rodape-base .botao-inicio {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 18px;
+    border: 1px solid var(--azul);
+    border-radius: 999px;
+    background: var(--azul);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0;
+    transition: var(--transicao);
+}
+
+.rodape-base .botao-inicio:hover {
+    background: #8ecaf7;
+    border-color: #8ecaf7;
+    color: #fff;
+}
+@media (max-width: 1100px) {
+
+    .topo {
+        padding: 0 4%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .menu-contato {
+        display: none;
+    }
+
+    .secao {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .familia,
+    .memorias {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .sobre-conteudo {
+        gap: 40px;
+    }
+
+    .secao-destaque {
+        gap: 40px;
+    }
+
+    .gostos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gosto-card {
+        height: 380px;
+    }
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .topo {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .menu {
+        max-width: calc(100% - 65px);
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 20px;
+        scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu a {
+        flex-shrink: 0;
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 720px;
+        height: 100svh;
+        padding: 120px 7% 80px;
+        align-items: flex-end;
+    }
+
+    .hero::before {
+        background:
+            linear-gradient(
+                0deg,
+                #242733 0%,
+                rgba(36, 39, 51, 0.85) 35%,
+                rgba(36, 39, 51, 0.15) 100%
+            );
+    }
+
+    .hero h1 {
+        font-size: clamp(75px, 17vw, 115px);
+        letter-spacing: -5px;
+    }
+
+    .hero-conteudo p {
+        max-width: 320px;
+        font-size: 13px;
+    }
+.secao,
+    .familia,
+    .memorias {
+        padding: 90px 7%;
+    }
+
+    .secao-cabecalho {
+        margin-bottom: 45px;
+    }
+
+    .secao-numero,
+    .secao-legenda {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sobre-titulo h2,
+    .secao-destaque h2,
+    .gostos-intro h2,
+    .memorias-intro h2,
+    .lugares-intro h2 {
+        font-size: clamp(55px, 12vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .sobre-texto p,
+    .secao-destaque-texto p,
+    .gostos-intro p,
+    .memorias-intro p,
+    .lugares-intro p,
+    .memorias-texto p {
+        font-size: 13px;
+    }
+
+    .sobre-fotos {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 45px;
+        gap: 10px;
+    }
+
+    .sobre-fotos img {
+        height: 210px;
+    }
+
+    .sobre-fotos img:first-child {
+        grid-column: span 2;
+        height: 270px;
+    }
+
+    .secao-destaque {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .secao-destaque-imagem {
+        height: 330px;
+    }
+
+    .galeria {
+        height: 240px;
+    }
+
+    .gostos-intro,
+    .memorias-intro,
+    .lugares-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .gostos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .gosto-card {
+        height: 300px;
+    }
+
+    .gosto-info {
+        left: 13px;
+        bottom: 18px;
+    }
+
+    .gosto-info h3 {
+        font-size: 14px;
+    }
+
+    .gosto-info p {
+        font-size: 10px;
+    }
+
+    .gostos-fotos {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .gostos-fotos img {
+        height: 170px;
+    }
+
+    .memorias-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 160px;
+        gap: 10px;
+    }
+
+    .memorias-grid img:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .memorias-grid img:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .memorias-texto {
+        margin-top: 35px;
+        text-align: left;
+    }
+
+    .lugares-listas {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .lugares-bloco {
+        padding: 25px;
+    }
+
+    .lugares-bloco h3 {
+        font-size: 25px;
+    }
+
+    .lugares-bloco ul {
+        gap: 12px;
+    }
+
+    .lugares-bloco li {
+        font-size: 11px;
+    }
+
+    .lugares-fotos {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .lugares-fotos img {
+        height: 160px;
+    }
+
+    .lugares-fotos img:first-child {
+        grid-column: span 2;
+        height: 210px;
+    }
+
+    .rodape {
+        padding: 80px 7% 25px;
+    }
+
+    .rodape h2 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+}
+
+
+
+
+@media (max-width: 380px) {
+
+    .menu {
+        gap: 13px;
+    }
+
+    .menu a {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .gosto-card {
+        height: 260px;
+    }
+
+    .gosto-info h3 {
+        font-size: 12px;
+    }
+
+    .lugares-bloco {
+        padding: 20px;
+    }
+}
+
+
+
+
+.topo {
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
