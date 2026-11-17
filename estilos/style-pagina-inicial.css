@@ -143,7 +143,7 @@ main {
 }
 
 .hero {
-    padding-block: 80px 120px;
+    padding-block: 56px 76px;
     scroll-margin-top: 24px;
 }
 
@@ -171,7 +171,7 @@ main {
     flex-wrap: wrap;
     gap: 16px;
 
-    margin-top: 46px;
+    margin-top: 34px;
 }
 
 .botao,
@@ -310,6 +310,16 @@ h2 {
     font-size: 0.95rem;
     font-weight: 600;
     line-height: 1;
+}
+
+.avatar-imagem {
+    display: block;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .av-violeta {
