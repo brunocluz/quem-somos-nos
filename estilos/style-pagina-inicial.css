@@ -16,7 +16,7 @@
 
     --raio-medio: 16px;
     --margem-lateral: clamp(24px, 5vw, 88px);
-    --deslocamento-conteudo: 1.3cm;
+    --deslocamento-conteudo: 2.5cm;
 }
 
 *,
@@ -423,6 +423,33 @@ h2 {
 
 .tags li:hover {
     color: #ffffff;
+}
+
+.rodape {
+    width: min(
+        calc(
+            100% - 2 * var(--margem-lateral)
+            - var(--deslocamento-conteudo)
+        ),
+        1440px
+    );
+
+    margin-left: calc(
+        var(--margem-lateral) + var(--deslocamento-conteudo)
+    );
+    margin-right: auto;
+
+    padding-block: 16px 40px;
+}
+
+.rodape p {
+    color: var(--texto-suave);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    opacity: 0.7;
 }
 
 @media (max-width: 1200px) {
