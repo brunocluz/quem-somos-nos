@@ -16,7 +16,7 @@
 
     --raio-medio: 16px;
     --margem-lateral: clamp(24px, 5vw, 88px);
-    --deslocamento-conteudo: 1.3cm;
+    --deslocamento-conteudo: 2.5cm;
 }
 
 *,
