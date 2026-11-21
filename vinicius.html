@@ -3,9 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vini Malvadeza</title>
+    <meta name="description" content="Página pessoal do Vinicius Guerra: curiosidades, gostos, jogos e lugares que quer visitar e que já conhece.">
+    <link rel="icon" type="image/jpeg" href="imagens/vinicius/peeper.jpg">
+    <title>Vinicius Guerra</title>
+    <link rel="stylesheet" href="estilos/style-vinicius.css">
 </head>
 <body>
-    
+
+    <header class="topo">
+        <nav class="menu">
+            <a href="paginaInicial.html">Início</a>
+            <a href="bruno.html">Bruno</a>
+            <a href="gabriel.html">Gabriel</a>
+            <a href="lucas.html">Lucas</a>
+            <a class="atual" href="vinicius.html">Vinicius</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-texto">
+                <p class="eyebrow">Sobre mim</p>
+                <h1>Vinicius <span class="destaque">Guerra</span></h1>
+
+                <div class="acoes">
+                    <a class="botao botao-primario" href="#curiosidades">Ver curiosidades &rarr;</a>
+                    <a class="botao botao-secundario" href="#ja-conheco">Lugares que já conheço</a>
+                </div>
+            </div>
+
+            <div class="foto">
+                <img src="imagens/vinicius/eu.jpeg" alt="Vinicius sorrindo, com camisa polo preta do Instituto J&amp;F e jaqueta cinza">
+            </div>
+        </section>
+
+        <section class="secao" id="curiosidades">
+            <h2>Curiosidades</h2>
+
+            <div class="curiosidades">
+                <ul class="lista-curiosidades">
+                    <li class="item">
+                        <span class="numero">01</span>
+                        <p>Viajei para a Irlanda depois de minha mãe ganhar um sorteio</p>
+                    </li>
+                    <li class="item">
+                        <span class="numero">02</span>
+                        <p>Fui 0,1% dos ouvintes de Linkin Park em 2025</p>
+                    </li>
+                    <li class="item">
+                        <span class="numero">03</span>
+                        <p>Tenho duas gatinhas</p>
+                    </li>
+                    <li class="item">
+                        <span class="numero">04</span>
+                        <p>Já ganhei a gincana da escola</p>
+                    </li>
+                    <li class="item">
+                        <span class="numero">05</span>
+                        <p>Conquistei uma medalha de prata como goleiro em um campeonato de futebol</p>
+                    </li>
+                    <li class="item">
+                        <span class="numero">06</span>
+                        <p>Como profissão reserva, gostaria de ser engenheiro eletrônico</p>
+                    </li>
+                </ul>
+
+                <div class="foto-gatas">
+                    <img src="imagens/vinicius/gatas.jpeg" alt="Minhas gatinhas Lila e Sula">
+                    <p>Lila e Sula</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao" id="gosto-de">
+            <h2>Gosto de</h2>
+
+            <ul class="gostos">
+                <li class="gosto">
+                    <img src="imagens/vinicius/pc.jpg" alt="Setup de computador gamer com iluminação roxa">
+                    <span class="gosto-nome">Jogar</span>
+                </li>
+                <li class="gosto">
+                    <img src="imagens/vinicius/cozinhado.jpg" alt="Pessoas cortando legumes em uma bancada de cozinha">
+                    <span class="gosto-nome">Cozinhar</span>
+                </li>
+                <li class="gosto">
+                    <img src="imagens/vinicius/dublagem.jpg" alt="Estúdio de dublagem com microfone e fone de ouvido">
+                    <span class="gosto-nome">Dublagem</span>
+                </li>
+                <li class="gosto">
+                    <img src="imagens/vinicius/musica.jpg" alt="Discos de vinil enfileirados ao lado de um fone de ouvido">
+                    <span class="gosto-nome">Música</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao" id="jogos">
+            <h2>Jogos que gosto</h2>
+
+            <ul class="jogos">
+                <li class="jogo jogo-subnautica">
+                    <img class="jogo-capa" src="imagens/vinicius/subnautica.jpg" alt="Capa do jogo Subnautica">
+                    <span class="jogo-nome">Subnautica</span>
+                    <span class="jogo-tipo">Sobrevivência</span>
+                </li>
+                <li class="jogo jogo-valorant">
+                    <img class="jogo-capa" src="imagens/vinicius/valorant.jpg" alt="Capa do jogo Valorant">
+                    <span class="jogo-nome">Valorant</span>
+                    <span class="jogo-tipo">FPS tático</span>
+                </li>
+                <li class="jogo jogo-minecraft">
+                    <img class="jogo-capa" src="imagens/vinicius/minecraft.jpg" alt="Capa do jogo Minecraft">
+                    <span class="jogo-nome">Minecraft</span>
+                    <span class="jogo-tipo">Sandbox</span>
+                </li>
+                <li class="jogo jogo-satisfactory">
+                    <img class="jogo-capa" src="imagens/vinicius/satisfactory.jpg" alt="Capa do jogo Satisfactory">
+                    <span class="jogo-nome">Satisfactory</span>
+                    <span class="jogo-tipo">Fábrica e automação</span>
+                </li>
+                <li class="jogo jogo-tbw">
+                    <img class="jogo-capa" src="imagens/vinicius/tatical-breach-wizards.jpg" alt="Capa do jogo Tactical Breach Wizards">
+                    <span class="jogo-nome">Tactical Breach Wizards</span>
+                    <span class="jogo-tipo">Tática por turnos</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao" id="quero-visitar">
+            <h2>Lugares que quero visitar</h2>
+
+            <ul class="lugares lugares-quatro">
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Japão" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/japao.jpg" alt="Japão">
+                        <span class="lugar-nome">Japão <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Taiwan" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/taiwan.jpg" alt="Taiwan">
+                        <span class="lugar-nome">Taiwan <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Alemanha" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/alemanha.jpg" alt="Alemanha">
+                        <span class="lugar-nome">Alemanha <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Canadá" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/canada.jpg" alt="Canadá">
+                        <span class="lugar-nome">Canadá <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao" id="ja-conheco">
+            <h2>Lugares que já conheço</h2>
+
+            <ul class="lugares lugares-cinco">
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/São_Paulo" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/sao-paulo.jpg" alt="São Paulo">
+                        <span class="lugar-nome">São Paulo <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Irlanda" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/irlanda.jpg" alt="Irlanda">
+                        <span class="lugar-nome">Irlanda <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://www.melhoresdestinos.com.br/o-que-fazer-em-foz-do-iguacu-dicas.html" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/foz.jpg" alt="Foz do Iguaçu">
+                        <span class="lugar-nome">Foz do Iguaçu <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Turismo_em_Natal_%28Rio_Grande_do_Norte%29" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/natal.jpg" alt="Natal">
+                        <span class="lugar-nome">Natal <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+                <li class="lugar">
+                    <a class="lugar-card" href="https://pt.wikipedia.org/wiki/Porto_Alegre" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/vinicius/porto-alegre.jpg" alt="Porto Alegre">
+                        <span class="lugar-nome">Porto Alegre <span class="seta">&#8599;</span></span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-linha">
+                <p>Página pessoal · Os garotos do 1C</p>
+                <a class="botao-voltar" href="paginaInicial.html">&larr; Voltar ao início</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
