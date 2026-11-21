@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,13 +16,18 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&family=Outfit:wght@500&family=Plus+Jakarta+Sans:wght@500;700&display=swap"
         rel="stylesheet"
     >
+    
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="estilos/style-pagina-inicial.css">
 </head>
 
 <body>
-    <header class="topo">
-        <nav class="menu" aria-label="Navegação principal">
+    <header class="topo position-relative">
+        <nav class="menu d-flex flex-wrap" aria-label="Navegação principal">
             <a href="#inicio">Início</a>
             <a href="#integrantes">Integrantes</a>
             <a href="#aprendizados">Aprendizados</a>
@@ -34,7 +40,7 @@
 
     <main>
         <section
-            class="hero"
+            class="hero position-relative"
             id="inicio"
             aria-labelledby="titulo-principal"
         >
@@ -44,15 +50,11 @@
                     <span class="destaque">lindos</span>
                 </h1>
 
-                <div class="acoes">
-                    <a class="botao botao-primario" href="#integrantes">
+                <div class="acoes d-flex flex-wrap">
+                    <a class="botao botao-primario d-inline-flex" href="#integrantes">
                         Conhecer os lindos
 
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M5 12h14M13 6l6 6-6 6"/>
                         </svg>
                     </a>
@@ -70,9 +72,9 @@
                 <p>Quem vocês querem conhecer primeiro?</p>
             </div>
 
-            <ol class="cards">
+            <ol class="cards d-grid">
                 <li>
-                    <article class="card" aria-labelledby="nome-bruno">
+                    <article class="card position-relative" aria-labelledby="nome-bruno">
                         <img
                             class="avatar-imagem"
                             src="imagens/bruno.jpeg"
@@ -85,17 +87,13 @@
                         </h3>
 
                         <a
-                            class="botao-card"
+                            class="botao-card d-inline-flex position-relative"
                             href="bruno.html"
                             aria-label="Ver perfil de Bruno Carlos Luz"
                         >
                             Ver perfil
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                                focusable="false"
-                            >
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M5 12h14M13 6l6 6-6 6"/>
                             </svg>
                         </a>
@@ -103,7 +101,7 @@
                 </li>
 
                 <li>
-                    <article class="card" aria-labelledby="nome-gabriel">
+                    <article class="card position-relative" aria-labelledby="nome-gabriel">
                         <span class="avatar av-turquesa" aria-hidden="true">
                             <img style="border-radius: 50px ;" src="Imagens/gabriel/Gabriel Ribeiro_4.jpeg" alt="" width="44" height="44" >
                         </span>
@@ -113,17 +111,13 @@
                         </h3>
 
                         <a
-                            class="botao-card"
+                            class="botao-card d-inline-flex position-relative"
                             href="gabriel.html"
                             aria-label="Ver perfil de Gabriel Ribeiro da Silva"
                         >
                             Ver perfil
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                                focusable="false"
-                            >
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M5 12h14M13 6l6 6-6 6"/>
                             </svg>
                         </a>
@@ -131,27 +125,26 @@
                 </li>
 
                 <li>
-                    <article class="card" aria-labelledby="nome-lucas">
-                        <span class="avatar av-coral" aria-hidden="true">
-                            <img style="border-radius: 50px ;" src="lucas/WhatsApp Image 2026-11-16 at 11.16.51.jpeg" alt="" width="44" height="44" >
-                        </span>
+                    <article class="card position-relative" aria-labelledby="nome-lucas">
+                        <img
+                            class="avatar-imagem"
+                            src="imagens/lumlum.jpeg"
+                            alt=""
+                            aria-hidden="true"
+                        >
 
                         <h3 class="nome" id="nome-lucas">
                             Lucas Gouveia Paraguassu
                         </h3>
 
                         <a
-                            class="botao-card"
+                            class="botao-card d-inline-flex position-relative"
                             href="lucas.html"
                             aria-label="Ver perfil de Lucas Gouveia Paraguassu"
                         >
                             Ver perfil
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                                focusable="false"
-                            >
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M5 12h14M13 6l6 6-6 6"/>
                             </svg>
                         </a>
@@ -159,7 +152,7 @@
                 </li>
 
                 <li>
-                    <article class="card" aria-labelledby="nome-vinicius">
+                    <article class="card position-relative" aria-labelledby="nome-vinicius">
                         <span class="avatar av-rosa" aria-hidden="true">
                             VG
                         </span>
@@ -169,17 +162,13 @@
                         </h3>
 
                         <a
-                            class="botao-card"
+                            class="botao-card d-inline-flex position-relative"
                             href="vinicius.html"
                             aria-label="Ver perfil de Vinicius Guerra Menezes de Souza"
                         >
                             Ver perfil
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                                focusable="false"
-                            >
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M5 12h14M13 6l6 6-6 6"/>
                             </svg>
                         </a>
@@ -195,7 +184,7 @@
         >
             <h2 id="titulo-aprendizados">O que utilizamos</h2>
 
-            <ul class="tags">
+            <ul class="tags d-flex flex-wrap">
                 <li>Cores</li>
                 <li>Tipografia</li>
                 <li>Box model</li>
@@ -204,8 +193,15 @@
                 <li>Hover</li>
                 <li>Border-radius</li>
                 <li>Responsivo</li>
+                <li>Bootstrap</li>
+                <li>Display</li>
+                <li>Position</li>
             </ul>
         </section>
     </main>
+
+    <footer class="rodape">
+        <p>Ajuda de IA para gerar o código.</p>
+    </footer>
 </body>
 </html>

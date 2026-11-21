@@ -3,20 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brunecazz</title>
+
     <link rel="icon" href="imagens/dado.png">
-    <title>Brunecaaaaas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&family=Outfit:wght@500&family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="estilos/style-bruno.css">
 </head>
-    <h1>Bruno Luz</h1>
-    <h3><a href="paginaInicial.html"target="_self">Voltar ao início.</a></h3>
+
 <body>
-    <p>
-        Eu sou o Bruno, e tenho 16 anos.
-    </p>
+    <header class="topo">
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="paginaInicial.html">Início</a>
+            <a href="bruno.html" aria-current="page">Bruno</a>
+            <a href="gabriel.html">Gabriel</a>
+            <a href="lucas.html">Lucas</a>
+            <a href="vinicius.html">Vinícius</a>
+        </nav>
+    </header>
 
-    <p>
-        Sou um estudante de tecnologia do Instituto J&F, e aqui aprendo desenvolvimento de sistemas.
+    <main>
+        <section class="hero" aria-labelledby="titulo-principal">
+            <img
+                class="foto"
+                src="imagens/bruno.jpeg"
+                alt="Foto de Bruno Luz"
+            >
 
-    </p>
+            <div class="hero-texto">
+                <h1 id="titulo-principal">
+                    Bruno
+                    <span class="destaque">Luz</span>
+                </h1>
+
+                <p class="apresentacao">
+                    Oi, eu sou o Bruno, tenho 16 anos e gosto muuuito de trabalhar com tecnologia.
+                </p>
+            </div>
+        </section>
+
+        <section class="sobre" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">Um pouco sobre mim</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Escola</h3>
+                    <p>
+                        Estudo no Instituto J&amp;F, onde aprendo desenvolvimento de
+                        sistemas.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Fora do VScode</h3>
+                    <p>
+                        Sou são-paulino e acompanho o São Paulo Futebol Clube desde
+                        pequeno. Também sou fã de UFC, e meus lutadores favoritos são o
+                        Conor McGregor e o Ilia Topuria. Gosto de jogar Roblox com minha
+                        amiga Manu Dias Velozo.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="trabalho" aria-labelledby="titulo-trabalho">
+            <h2 id="titulo-trabalho">Meu trabalho</h2>
+
+            <div class="trabalho-conteudo">
+                <div class="trabalho-texto">
+                    <p>
+                        Trabalho como desenvolvedor back-end na PicPay da Vila Leopoldina,
+                        na unidade de Shop.
+                    </p>
+
+                    <dl class="dados">
+                        <div>
+                            <dt>Empresa</dt>
+                            <dd>PicPay</dd>
+                        </div>
+                        <div>
+                            <dt>Função</dt>
+                            <dd>Desenvolvedor back-end</dd>
+                        </div>
+                        <div>
+                            <dt>Unidade</dt>
+                            <dd>Shop</dd>
+                        </div>
+                        <div>
+                            <dt>Local</dt>
+                            <dd>Vila Leopoldina</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <figure class="foto-trabalho">
+                    <img
+                        src="imagens/bruno-picpay.jpeg"
+                        alt="Bruno Luz sendo PicPayer"
+                    >
+                </figure>
+            </div>
+        </section>
+
+        <section class="projeto" aria-labelledby="titulo-projeto">
+            <h2 id="titulo-projeto">Projeto Delta</h2>
+
+            <div class="projeto-conteudo">
+                <div class="projeto-lateral">
+                    <figure class="foto-projeto">
+                        <img
+                            src="imagens/delta-bruno.jpeg"
+                            alt="Bruno Luz no projeto Delta"
+                        >
+                    </figure>
+
+                    <a
+                        class="botao botao-externo"
+                        href="https://github.com/delta-app-ofc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver no GitHub
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M7 17L17 7M8 7h9v9"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="projeto-texto">
+                    <p class="selo">Projeto interdisciplinar</p>
+
+                    <p class="projeto-resumo">
+                        O Delta é um sistema inteligente de monitoramento e gestão do
+                        consumo de água. Sensores instalados em hidrômetros enviam os
+                        dados da casa, que são analisados para mostrar o consumo quase em
+                        tempo real, encontrar vazamentos e ajudar a reduzir o desperdício.
+                        Tudo isso aparece em uma plataforma web e em um aplicativo.
+                    </p>
+
+                    <p class="projeto-equipe">
+                        Somos uma equipe de 11 alunos do 1º e do 2º ano, e cada
+                        grupo cuida de uma parte do sistema.
+                    </p>
+
+                    <h3>O que o Delta faz</h3>
+                    <ul class="tags tags-menor">
+                        <li>Monitoramento do consumo</li>
+                        <li>Detecção de vazamentos</li>
+                        <li>Alertas inteligentes</li>
+                        <li>Chatbot</li>
+                        <li>Previsão da conta de água</li>
+                        <li>Metas de consumo</li>
+                    </ul>
+
+                    <h3>Tecnologias</h3>
+                    <ul class="tags tags-menor">
+                        <li>ESP32</li>
+                        <li>Java (Spring Boot)</li>
+                        <li>Python (FastAPI)</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                        <li>Neo4j</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="acolito" aria-labelledby="titulo-acolito">
+            <h2 id="titulo-acolito">Acólito</h2>
+
+            <div class="trabalho-conteudo">
+                <div class="trabalho-texto">
+                    <p>
+                        Eu sirvo na igreja católica: sou acólito, e gosto muito de servir
+                        no ambão.
+                    </p>
+                </div>
+
+                <figure class="foto-acolito">
+                    <img
+                        src="imagens/bruno-acolito.jpeg"
+                        alt="Bruno Luz vestido de acólito na igreja"
+                    >
+                </figure>
+            </div>
+        </section>
+
+        <section class="materias" aria-labelledby="titulo-materias">
+            <h2 id="titulo-materias">Matérias favoritas</h2>
+
+            <ul class="tags">
+                <li>História</li>
+                <li>Matemática</li>
+                <li>Física</li>
+            </ul>
+
+            <p class="nota">
+                E no curso Tech, eu gosto muito de todas igualmente.
+            </p>
+        </section>
+
+        <div class="acoes">
+            <a class="botao" href="paginaInicial.html">
+                Voltar ao início
+
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M19 12H5M11 6l-6 6 6 6"/>
+                </svg>
+            </a>
+        </div>
+    </main>
 </body>
-    <h3><a href="paginaInicial.html"target="_self">Voltar ao início</a></h3>
 </html>
