@@ -782,7 +782,7 @@ button {
     }
 
     .menu a {
-        font-size: 9px;
+        font-size: 0.875rem;
     }
 
     .menu-contato {
@@ -849,7 +849,7 @@ button {
 
     .menu a {
         flex-shrink: 0;
-        font-size: 9px;
+        font-size: 0.875rem;
     }
 
     .hero {
@@ -870,13 +870,13 @@ button {
     }
 
     .hero h1 {
-        font-size: clamp(75px, 17vw, 115px);
+        font-size: clamp(2.75rem, 12vw, 4.5rem);
         letter-spacing: -5px;
     }
 
     .hero-conteudo p {
         max-width: 320px;
-        font-size: 13px;
+        font-size: 0.9375rem;
     }
 .secao,
     .familia,
@@ -890,7 +890,7 @@ button {
 
     .secao-numero,
     .secao-legenda {
-        font-size: 8px;
+        font-size: 0.625rem;
         letter-spacing: 1px;
     }
 
@@ -904,7 +904,7 @@ button {
     .gostos-intro h2,
     .memorias-intro h2,
     .lugares-intro h2 {
-        font-size: clamp(55px, 12vw, 75px);
+        font-size: clamp(2.25rem, 10vw, 4rem);
         letter-spacing: -3px;
     }
 
@@ -914,7 +914,7 @@ button {
     .memorias-intro p,
     .lugares-intro p,
     .memorias-texto p {
-        font-size: 13px;
+        font-size: 0.9375rem;
     }
 
     .sobre-fotos {
@@ -972,7 +972,7 @@ button {
     }
 
     .gosto-info p {
-        font-size: 10px;
+        font-size: 0.8125rem;
     }
 
     .gostos-fotos {
@@ -1022,7 +1022,7 @@ button {
     }
 
     .lugares-bloco li {
-        font-size: 11px;
+        font-size: 0.875rem;
     }
 
     .lugares-fotos {
@@ -1059,11 +1059,11 @@ button {
     }
 
     .menu a {
-        font-size: 8px;
+        font-size: 0.875rem;
     }
 
     .hero h1 {
-        font-size: 68px;
+        font-size: clamp(2.5rem, 12vw, 3rem);
     }
 
     .gosto-card {
@@ -1071,7 +1071,7 @@ button {
     }
 
     .gosto-info h3 {
-        font-size: 12px;
+        font-size: 0.875rem;
     }
 
     .lugares-bloco {
