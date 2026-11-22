@@ -479,6 +479,7 @@ h2 {
 @media (max-width: 640px) {
     :root {
         --margem-lateral: 20px;
+        --deslocamento-conteudo: 0;
     }
 
     .topo {
